@@ -1,5 +1,8 @@
-<h1>Assignment 4 / {{student.name}}</h1>
-<h1>Student ID: {{student.studentId}}</h1>
-<h1>Status: {{student.status}}</h1>
+<!--Josh Trueman 991257988-->
+
+<!--Pull the headerInfo input from the student object-->
 <app-header [headerInfo]='student'></app-header>
+
+<!--Pull the cars list from the JSON-->
+<app-trueman [mainInfo]='student' [newCars]='newCars' [usedCars]='usedCars'></app-trueman>
 <app-footer></app-footer>

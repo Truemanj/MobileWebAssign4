@@ -1,5 +1,8 @@
+//Josh Trueman 991257988
+
 import { Component, OnInit, Input } from '@angular/core';
-import {myBio} from '../../../myBio'
+//Import myBio object for the header to use
+import {MyBio} from '../../../MyBio'
 
 
 
@@ -16,7 +19,7 @@ export class HeaderComponent implements OnInit {
   
   
   }
-
-  @Input() headerInfo: myBio;
+// Use Input to get myBio info for the header 
+  @Input() headerInfo: MyBio;
 }
 

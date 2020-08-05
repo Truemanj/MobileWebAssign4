@@ -1,0 +1,51 @@
+<!--Josh Trueman 991257988-->
+
+<!--Create the tab group-->
+<mat-tab-group mat-stretch-tabs dynamicHeight>
+  <!--First tab with courses-->  
+  <mat-tab label="My Courses">
+      <ul> 
+        <!--Iterate through the myClasses array and create list item with course name-->
+        <li class= "classes" *ngFor= "let cls of myClasses; let i=index" id= "s{{i}}"
+            (click)="onClickMe(i)"> {{cls.courseName}}
+            <!--When clicked display the information from the classinfo object-->
+            <div id='d{{i}}' [ngStyle]="{display : showHideText(i) }">
+              <strong>Class Name:</strong> {{cls.courseName}}<br>
+              <strong>Credits:</strong> {{cls.credits}}<br> 
+              <strong>Description:</strong> {{cls.desc}}<br>  
+            </div>
+        </li>    
+      </ul>
+    </mat-tab>
+    <!--Second tab with student info-->
+    <mat-tab label="My Info"> 
+      <!--Create a div and populate with info from the myBio object-->
+      <div class="box">
+        <pre>Name:                                   {{mainInfo.name}}</pre>
+        <pre>StudentID:                                 {{mainInfo.studentId}}</pre>
+        <pre>Status:                                    {{mainInfo.status}}</pre>
+        <pre>Image:                                    <img class ="flag" src={{mainInfo.imageLocation}}></pre>
+      </div>  
+    </mat-tab>
+    
+    <!--Third tab with cars list-->
+    <mat-tab label="Display New or Used Cars">
+      <!--Create a button for new cars list-->
+      <button mat-raised-button   [ngClass]="{buttonCSS: 'true'}"
+          (click)="displayJSON(1)">
+          Click to list new cars
+            <mat-icon color="primary">new_releases</mat-icon>
+      </button>
+          <hr>
+      <!--Create a button for new cars list-->
+      <button mat-raised-button   [ngClass]="{buttonCSS: 'true'}"
+              (click)="displayJSON(2)">
+              Click to list used cars
+              <mat-icon color="primary">watch</mat-icon>
+      </button>
+      <!--Display list information-->
+      <div id="list">
+        <p  [innerHTML]="outArea"></p>
+      </div>
+    </mat-tab>
+  </mat-tab-group>

@@ -7,10 +7,12 @@ import{ HeaderfooterModule }from './modules/headerfooter/headerfooter.module';
 import {ReactiveFormsModule} from '@angular/forms'; 
 import {MaterialModule} from './modules/material-ui/material-ui.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TruemanComponent } from './trueman/trueman.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TruemanComponent
   
   ],
   imports: [

@@ -1,0 +1,33 @@
+mat-tab-group{
+    background-color: rgb(227, 236, 227);
+    text-align: center;
+    border-top: #78909c;
+    padding: 1em;
+    
+    
+}
+
+.box {
+
+    background-color: lightblue;
+    border: blue solid;
+    height: 12em;
+    width: 50%;
+    margin: 1em;
+    display: inline-block;
+    font-style: bold;
+    
+    
+}
+
+
+.flag {
+
+    height: 4em;
+    width: 6em;
+}
+
+.classes {
+
+    text-align: left;
+}
